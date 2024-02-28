@@ -9,22 +9,40 @@ function sanitizeStringInput(str) {
     return str.replace(regex, '');
 }
 
+function isInputEmpty(str) {
+    if (str !== "") {
+        return false;
+    }
+    return true;
+}
 function addTask(timeOfDay) {
-    const task = sanitizeStringInput(taskInput['value']);
+    if (isInputEmpty(taskInput['value']))
+    {
+        alert("Please enter a task.")
+    }
+    else
+    {
+        const task = sanitizeStringInput(taskInput['value']);
+        const HTMLString = "<li>" + task + "</li>";
+        const deleteButton = document.createElement("button");
 
-    if (timeOfDay === "morning") {
-        const morningTask = document.getElementById("morning-task-list");
-        morningTask.innerHTML += String(task);
-    }
-    if (timeOfDay === "afternoon") {
-        const afternoonTask = document.getElementById("afternoon-task-list");
-        afternoonTask.innerHTML += String(task);
-    }
-    if (timeOfDay === "evening") {
-        const eveningTask = document.getElementById("evening-task-list");
-        eveningTask.innerHTML += String(task);
+        if (timeOfDay === "morning") {
+            const morningTask = document.querySelector("#morning-task-list ol");
+            morningTask.innerHTML += HTMLString;
+        }
+        if (timeOfDay === "afternoon") {
+            const afternoonTask = document.querySelector("#afternoon-task-list ol");
+            afternoonTask.innerHTML += HTMLString;
+        }
+        if (timeOfDay === "evening") {
+            const eveningTask = document.getElementById("#evening-task-list ol");
+            eveningTask.innerHTML += HTMLString;
+        }
     }
 
+}
+
+function deleteTask() {
 
 }
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="task-board">
+   <div class="card">
+       <h3>Enter task </h3>
+       <input type="text" id="task-input">
+       <div class="timeTaskOptions">
+           <button id="morning-button">Morning</button>
+           <button id="afternoon-button">Afternoon</button>
+           <button id="evening-button">Evening</button>
+       </div>
+   </div>
+    <div class="card">
+      <h3>Morning Tasks</h3>
+      <div class="task-list" id="morning-task-list"></div>
+    </div>
+    <div class="card">
+        <h3>Afternoon Tasks</h3>
+        <div class="task-list" id="afternoon-task-list"></div>
+    </div>
+    <div class="card">
+        <h3>Evening Tasks</h3>
+        <div class="task-list" id="evening-task-list"></div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

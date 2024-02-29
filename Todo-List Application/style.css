@@ -41,3 +41,7 @@ button {
     color: #FFCAD4;
     padding: 0.25rem;
 }
+
+.delete-button {
+    display: block;
+}

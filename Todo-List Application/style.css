@@ -42,6 +42,12 @@ button {
     padding: 0.25rem;
 }
 
-.delete-button {
-    display: block;
+.delete-button-for-task {
+    display: inline-flex;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5vh;
 }

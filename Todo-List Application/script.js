@@ -19,9 +19,9 @@ function addTask(timeOfDay) {
     else
     {
         const taskValue = sanitizeStringInput(taskInput['value'].toString());
-        const HTMLString = `<li> ${taskValue} <span class="delete-button-for-task"><button class="delete-button">Delete Task</button> </span></li>`;
+        const HTMLString = `<li id="${taskValue}-${timeOfDay}"> ${taskValue} <span class="delete-button-for-task"><button class="delete-button">Delete Task</button> </span></li>`;
 
-        const timeSpecificTask = document.querySelector(`#${timeOfDay}-task-list`);
+        const timeSpecificTask = document.querySelector(`.${timeOfDay}-task-list`);
         timeSpecificTask.innerHTML += HTMLString;
         deleteTask(document.querySelectorAll('.delete-button-for-task'));
     }
